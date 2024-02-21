@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Training Platform</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Training Platform</h1>
+    </div>
+    <form class="activity-form">
+      <h4>Add a new activity</h4>
+      <div class="form-control">
+        <div class="sport">
+          <label for="sports">Activity type:</label><br>
+          <select id="sports" name="sports">
+            <option value="Ride">Ride</option>
+            <option value="Virtual Ride">Virtual Ride</option>
+            <option value="Run">Run</option>
+            <option value="Swim">Swim</option>
+            <option value="Hike">Hike</option>
+            <option value="Weight Training">Weight Training</option>
+          </select>
+        </div>
+        <div class="date">
+          <label for="date">Date:</label><br>
+          <input id="date" name="date" type="date">
+        </div>
+        <div class="title">
+          <label for="title">Activity Title:</label><br>
+          <input id="title" name="title" type="text" class="title" placeholder="e.g. Endurance Ride">
+        </div>
+        <div class="duration">
+          <label>Duration:</label><br>
+          <input id="hours" name="duration" type="text" class="duration" placeholder="h">
+          <input id="minutes" name="duration" type="text" class="duration" placeholder="m">
+          <input id="seconds" name="duration" type="text" class="duration" placeholder="s">
+        </div>
+        <div class="distance">
+          <label for="distance">Distance:</label><br>
+          <input id="distance" name="distance" type="text" class="distance" placeholder="20">
+          <p>km</p>
+        </div>
+        <div class="elevation">
+          <label for="elevation">Elevation:</label><br>
+          <input id="elevation" name="elevation" type="text" class="elevation" placeholder="300">
+          <p>m</p>
+        </div>
+        <div class="submit">
+          <button type="submit" class="btn submit-btn">submit</button>
+        </div>
+      </div>
+      <div class="form-alert"></div>
+    </form>
+    <section class="activity-container">
+      <p class="loading-text">Loading...</p>
+      <div class="activities"></div>
+    </section>
+  </div>
+
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
